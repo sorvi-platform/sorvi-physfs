@@ -1,0 +1,20 @@
+.{
+    .name = .sorvi_physfs,
+    .version = "3.2.0",
+    .fingerprint = 0x985ade54a9500f6e,
+    .minimum_zig_version = "0.15.0",
+    .dependencies = .{
+        .sorvi = .{
+            .path = "sorvi", // symlink to the zig cache folder for now
+        },
+        .physfs = .{
+            .url = "git+https://github.com/icculus/physfs.git#d70c3fcf06814f8608c8327d3e8136063ee0133d",
+            .hash = "N-V-__8AAJqyFwB0QFyAyl34IwnsxIaac8sNKTnA65rCvh9S",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
