@@ -4,7 +4,7 @@ export fn __PHYSFS_platformInit(_: [*:0]const u8) c_int {
     return 1;
 }
 
-export fn __PHYSFS_platformDeinit(_: [*:0]const u8) void {}
+export fn __PHYSFS_platformDeinit() void {}
 
 export fn __PHYSFS_platformDetectAvailableCDs(_: *anyopaque, _: ?*anyopaque) void {}
 
