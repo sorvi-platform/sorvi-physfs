@@ -1,7 +1,5 @@
 const std = @import("std");
 
-const sorvi = @import("sorvi");
-
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
@@ -13,7 +11,7 @@ pub fn build(b: *std.Build) void {
         .linkage = .static,
         .root_module = b.createModule(.{
             .root_source_file = b.path("src/physfs_platform_sorvi.zig"),
-            .target = sorvi.resolveSorviTarget(b, target.query),
+            .target = target,
             .optimize = optimize,
             .link_libc = true,
         }),
